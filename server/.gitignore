@@ -1,0 +1,6 @@
+node_modules
+.env
+
+# files used while practicing Express backend
+AsyncReadWrite.js
+data.js
