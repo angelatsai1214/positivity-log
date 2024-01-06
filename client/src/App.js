@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Home from "./Home/Home";
+// import Create from "./Create/Create";
+import "./App.css";
 
 function App() {
   return (
@@ -8,6 +10,7 @@ function App() {
         <Router>
           <Routes>
             <Route exect path='/' element={ <Home /> } />
+            {/* <Route exect path='/create' element={ <Create /> } /> */}
           </Routes>
         </Router>
         

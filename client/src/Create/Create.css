@@ -1,0 +1,28 @@
+.create-container {
+    margin: 10vh 10vw;
+}
+
+.textarea {
+    width: 80%;
+    padding: 20px;
+    text-align: left;
+    font-size: large;
+    margin-bottom: 3vh;
+
+}
+
+h1 {
+    margin-bottom: 5vh;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: large;
+    border: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(0, 89, 255);
+    color: white;
+
+}
