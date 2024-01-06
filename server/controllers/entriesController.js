@@ -13,6 +13,17 @@ const getEntries = async (req, res) => {
     res.status(200).json({success:true, payload: entries})
 }
 
+const getOneEntry = async(req, res) => {
+    const {id} = req.params;
+    let entry = [];
+    try{
+        entry = await Entries.find({_id: id})
+    }catch{
+        return res.status(400).json({success: false})
+    }
+    res.status(200).json({success: true, payload: entry})
+}
+
 const createEntry = async (req, res) => {
     // console.log("Create Entry:")
     const {items} = req.body;
@@ -20,15 +31,14 @@ const createEntry = async (req, res) => {
 
     try{
         const found = await Entries.find({ date: date} )
-        // console.log(found)
         if( found.length === 0 ){
             await Entries.create({date, items})
         }else{
-            return res.status(200).json({ success: true, message: `Already have an entry for the date: ${date}`})
+            return res.status(200).json({ success: false, message: `Already have an entry for the date: ${date}, please Edit instead.`, id: found[0]._id.toString()})
         }
         
     }catch(err){
-        // console.log(err)
+        console.log(err)
         return res.status(400).json({success:false})
     }
     
@@ -63,6 +73,7 @@ const deleteEntry = async (req, res) => {
 
 module.exports = {
     getEntries, 
+    getOneEntry,
     createEntry,
     updateEntry,
     deleteEntry
