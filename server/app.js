@@ -20,7 +20,7 @@ mongoose.connect(process.env.DB_URL, {
 app.use(express.json())
 
 app.use(cors({
-    credentials: true,
+    // credentials: true,
     origin: "https://positivity-log-frontend.vercel.app"
   }));
 
