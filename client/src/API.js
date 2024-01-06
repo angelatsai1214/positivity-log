@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const serverURL = 'http://localhost:5005';
-const serverURL = 'https://positivity-log.vercel.app';
+const serverURL = 'https://positivity-log-backend.vercel.app/';
 
 
 const API = {
