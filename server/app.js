@@ -20,8 +20,9 @@ mongoose.connect(process.env.DB_URL, {
 app.use(express.json())
 
 app.use(cors({
-    // credentials: true,
-    origin: "https://positivity-log-frontend.vercel.app"
+    origin: "https://positivity-log-frontend.vercel.app",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
   }));
 
 app.use('/entries', entriesRouter)
