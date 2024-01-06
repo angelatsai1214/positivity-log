@@ -6,7 +6,7 @@ const serverURL = 'https://positivity-log-frontend.vercel.app';
 
 const API = {
     getEntries: function(){
-        return axios.get(`${serverURL}/entries/`)
+        return axios.get("https://positivity-log-frontend.vercel.app/entries/")
     },
 
     getOneEntries: function(id){
