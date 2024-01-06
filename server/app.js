@@ -29,8 +29,8 @@ app.use('/entries', entriesRouter)
 
 
 
-app.listen(5005, () => {
-    console.log('Server is listening at port 5005')
+app.listen(process.env.PORT, () => {
+    console.log(`Server is listening at port ${process.env.PORT}`)
 })
 
 module.exports = app;
