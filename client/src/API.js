@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const serverURL = 'http://localhost:5005';
+// const serverURL = 'http://localhost:5005';
+const serverURL = 'https://positivity-log-backend-angela-tsais-projects.vercel.app/';
+
 
 const API = {
     getEntries: function(){
