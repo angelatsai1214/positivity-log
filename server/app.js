@@ -21,7 +21,7 @@ app.use(express.json())
 
 app.use(cors({
     credentials: true,
-    origin: "https://positivity-log-frontend.vercel.app/"
+    origin: "https://positivity-log-frontend.vercel.app"
   }));
 
 app.use('/entries', entriesRouter)
