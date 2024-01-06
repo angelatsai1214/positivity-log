@@ -4,3 +4,5 @@ node_modules
 # files used while practicing Express backend
 AsyncReadWrite.js
 data.js
+.vercel
+app.js
