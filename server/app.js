@@ -33,6 +33,8 @@ app.listen(5005, () => {
     console.log('Server is listening at port 5005')
 })
 
+module.exports = app;
+
 
 // app.get('/api/products', (req, res) =>{
 //     const newProducts = products.map((product) => {
