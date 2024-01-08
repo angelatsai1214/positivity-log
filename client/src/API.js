@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-// const serverURL = 'http://localhost:5005';
-const serverURL = 'https://positivity-log-frontend.vercel.app';
+const serverURL = 'http://localhost:5005';
+// const serverURL = process.env.REACT_APP_SERVER_URL;
 
 
 const API = {
     getEntries: function(){
-        return axios.get("https://positivity-log-frontend.vercel.app/entries/")
+        return axios.get(`${serverURL}/entries`)
     },
 
     getOneEntries: function(id){
