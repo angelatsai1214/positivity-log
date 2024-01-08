@@ -9,7 +9,7 @@ const entriesRouter = require('./routes/entriesRouter.js')
 const dotenv = require('dotenv')
 
 dotenv.config()
-require("./bin/www");
+// require("./bin/www");
 
 
 mongoose.connect(process.env.DB_URL, {
